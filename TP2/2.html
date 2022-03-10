@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <ul>
+        <li onclick="toUp(this)">Paris</li>
+        <li onclick="toUp(this)">Beirut</li>
+        <li onclick="toUp(this)">Cairo</li>
+        <li onclick="toUp(this)">London</li>
+    </ul>
+    
+
+</body>
+<script>
+    function toUp(city){
+        document.querySelector("ul").prepend(city);
+    }   
+</script>
+</html>
+

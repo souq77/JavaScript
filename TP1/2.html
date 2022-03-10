@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<body>
+<p>First</p>
+<p>Second</p>
+<p>Third</p>
+</body>
+
+<script>
+    let p = document.getElementsByTagName('p');
+    for (let i = 0; i < p.length; i++) {
+        const element = p[i];
+        switch (i) {
+            case 0:
+                element.style.fontWeight="bold";
+                break;
+            case 1:
+                element.style.fontStyle="italic";
+                break;
+            case 2:
+                element.style.textTransform="uppercase";
+                break;
+        }
+        
+    }
+</script>

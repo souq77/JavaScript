@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<body>
+<img class="fit-picture" onclick="add20('firstImage')" src="https://images2.alphacoders.com/238/thumbbig-238870.webp">
+<img class="fit-picture" onclick="add20('SecondImage')" src="https://images2.alphacoders.com/386/thumbbig-38622.webp">
+</body>
+
+<script>
+    function add20(image){
+        if (image=='firstImage') {
+            let width1 = document.getElementsByTagName('img')[0].style.width;
+            if (!width1) {
+                width1=0;
+            }
+            width1 = parseFloat(width1);
+            document.getElementsByTagName('img')[0].style.width = (width1+20)+"%";
+            let width2 = document.getElementsByTagName('img')[1].style.width;
+            if (!width2) {
+                width2=0;
+            }
+            width2 = parseFloat(width2);
+            if (width2-20>0) {
+                document.getElementsByTagName('img')[1].style.width = (width2-20)+"%";
+            }
+        } else {
+            let width1 = document.getElementsByTagName('img')[1].style.width;
+            if (!width1) {
+                width1=0;
+            }
+            width1 = parseFloat(width1);
+            document.getElementsByTagName('img')[1].style.width = (width1+20)+"%";
+            let width2 = document.getElementsByTagName('img')[0].style.width;
+            if (!width2) {
+                width2=0;
+            }
+            width2 = parseFloat(width2);
+            if (width2-20>0) {
+                document.getElementsByTagName('img')[0].style.width = (width2-20)+"%";
+            }
+        }
+    }
+</script>

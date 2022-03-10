@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<body>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://images2.alphacoders.com/238/thumbbig-238870.webp" >
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://images2.alphacoders.com/386/thumbbig-38622.webp" >
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://images2.alphacoders.com/294/thumbbig-29492.webp" >
+</body>
+
+<script>
+    function bigImg(img) {
+        var currWidth = img.clientWidth;
+        img.style.width = (currWidth * 3) + "px";
+    }
+    function normalImg(img) {
+        var currWidth = img.clientWidth;
+        img.style.width = (currWidth / 3) + "px";
+    }
+    
+</script>

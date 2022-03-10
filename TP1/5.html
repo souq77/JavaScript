@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+<p>My first paragraph.</p>
+<p>My first paragraph.</p>
+<p>My first paragraph.</p>
+<p>My first paragraph.</p>
+
+</body>
+<script>
+  var element = document.getElementsByTagName("p"), index;
+
+for (index = element.length - 1; index >= 0; index--) {
+    element[index].parentNode.removeChild(element[index]);
+}
+</script>
+</html>
+
