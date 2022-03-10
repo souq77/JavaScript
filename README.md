@@ -1,5 +1,5 @@
 # JavaScript
 
-Nom : ATTA
-Prenom : Rabie
+Nom : ATTA, 
+Prenom : Rabie, 
 mail : rabie.atta@mail-ecv.fr
