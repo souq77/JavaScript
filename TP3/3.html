@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<body>
+
+</body>
+<style>
+    .red {
+        background-color: red !important;
+    }
+</style>
+<script>
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+
+for (let i = 0; i < Math.floor(getRandomArbitrary(5,15)); i++) {
+    let newDiv = document.createElement("div");
+    newDiv.style.height="50px";
+    newDiv.style.width="100%";
+    newDiv.style.backgroundColor= '#'+Math.floor(Math.random()*16777215).toString(16);
+    document.body.appendChild(newDiv);
+}
+divs = document.querySelectorAll('div');
+divs.forEach(div => {
+        div.addEventListener('click', function () {
+            let color = div.style.backgroundColor;
+            if (!div.classList.contains('red')) {
+                div.classList.add('red');
+            } else {
+                div.classList.remove('red');
+                div.style.backgroundColor = "#" + color;
+        }
+    })
+});
+</script>

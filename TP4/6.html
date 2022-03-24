@@ -1,0 +1,14 @@
+<script>
+    function findLongestWord(str) {
+        str = str.split(" ");
+        let meilleur = str[0];
+        for (let i = 1; i < str.length; i++) {
+            let challenger=str[i];
+            if(challenger.length > meilleur.length){
+                meilleur = challenger;
+            }
+            
+        }
+        return meilleur;
+    }
+</script>

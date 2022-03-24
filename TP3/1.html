@@ -1,0 +1,26 @@
+<div class="div" onclick="changeColor(this)"></div>
+<div class="div" onclick="changeColor(this)"></div>
+<div class="div" onclick="changeColor(this)"></div>
+
+
+<style>
+.div{
+    width: 50%;
+    height: 50%;
+    background-color: black;
+    margin: 20px;
+}
+</style>
+
+
+<script>
+function changeColor(div){
+    if (div.style.backgroundColor=="black") {
+        div.style.backgroundColor="red";
+    }else{
+        div.style.backgroundColor="black";
+    }
+}
+
+
+</script>

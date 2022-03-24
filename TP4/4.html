@@ -1,0 +1,18 @@
+<script>
+    function capitalize(str) {
+       str = str.charAt(0).toUpperCase() + str.slice(1);
+        return str;
+    }
+
+    function pascalCase(str){
+        str = capitalize(str);
+        let newStr='';
+        for (let i = 0; i < str.length; i++) {
+            if (str.charAt(i)!=' ') {
+               newStr+=str.charAt(i);
+            }
+            
+        }
+        return newStr;
+    }
+</script>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<body>
+
+<p>hauteur: <span id="hauteur"></span></p>
+<p>largeur: <span id="largeur"></span></p>
+</body>
+
+<script>
+
+const hauteur = document.querySelector('#hauteur');
+const largeur = document.querySelector('#largeur');
+
+function reportWindowSize() {
+  hauteur.innerHTML = window.innerHeight;
+  largeur.innerHTML = window.innerWidth;
+  console.log("hh");
+}
+
+window.onresize = reportWindowSize;
+</script>

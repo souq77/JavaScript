@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<body>
+
+    <ul id="liste">
+
+    </ul>
+</body>
+
+<script>
+
+
+document.addEventListener('keydown', function(event) {
+    if(window.event) { // IE                  
+        keynum = event.keyCode;
+    } else if(event.which){ // Netscape/Firefox/Opera                 
+        keynum = event.which;
+    }
+    let li = document.createElement("li");
+    li.innerHTML=String.fromCharCode(keynum);
+    if(document.getElementById("liste").childElementCount==20){
+        document.getElementById("liste").removeChild(document.getElementById("liste").children[0]);
+    }
+    document.getElementById("liste").appendChild(li);
+}, true);
+</script>
