@@ -1,0 +1,11 @@
+<script>
+    function arrayDiff(arr,arr2){
+        let difference = arr
+                 .filter(x => !arr2.includes(x))
+                 .concat(arr.filter(x => !arr.includes(x)));
+        let difference1 = arr2
+                 .filter(x => !arr.includes(x))
+                 .concat(arr2.filter(x => !arr2.includes(x)));
+        return difference.concat(difference1);
+    }
+</script>

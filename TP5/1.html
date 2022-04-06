@@ -1,0 +1,31 @@
+
+<script>
+    function getHashTags(str) {
+        arr = str.split(' ');
+        let challenger1 = '';
+        let challenger2 = '';
+        let challenger3 = '';
+        console.log(arr);
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].length > challenger1.length) {
+              challenger1 = arr[i];
+            }
+        }
+       console.log(challenger1);
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].length > challenger2.length && arr[i]!=challenger1) {
+              challenger2 = arr[i];
+            }
+        }
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].length > challenger3.length && arr[i]!=challenger2 && arr[i]!=challenger1) {
+              challenger3 = arr[i];
+            }
+        }
+        let challengers=[];
+        challengers.push("#"+challenger1);
+        challengers.push("#"+challenger2);
+        challengers.push("#"+challenger3);
+        return challengers;
+    }
+</script>
