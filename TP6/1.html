@@ -1,0 +1,90 @@
+<script>
+let x1 = ({
+    name: "Matt",
+    surname: "Edabit",
+    gender: "M",
+    dob: "1/1/1900"
+    }) //"DBTMTT00A01"
+
+let x2 = ({
+    name: "Helen",
+    surname: "Yu",
+    gender: "F",
+    dob: "1/12/1950"
+    }) //"YUXHLN50T41"
+
+let x3 = ({
+    name: "Mickey",
+    surname: "Mouse",
+    gender: "M",
+    dob: "16/1/1928"
+    }) // "MSOMKY28A16"
+
+const voyelles = ["A", "E", "I", "O", "U"];
+const months = ['A','B','C','D','E','H','L','M','P','R','S','T'];
+function getFromName(str){
+    str = str.toUpperCase();
+    if(str.length < 3){
+        while(str.length < 3){
+            str+='X';
+        }
+        return str;
+    }
+    let code = '';
+    for (let i = 0; i < str.length; i++) {
+        if(!voyelles.includes(str[i]) && code.length <3){
+            code+=str[i];
+        }
+        
+    }
+    if(code.length == 3){
+        return code;
+    }else{
+        let i = 0
+        while(code.length < 3){
+                if(!code.includes(str[i])){
+                    code+=str[i];
+                }
+                i++;
+        }
+        return code;
+    }
+    
+
+}
+function getYearOfBirth(str){
+    str = str.split('/');
+    return str[2].charAt(2)+str[2].charAt(3);
+}
+function getMonthOfBirth(str){
+    str = str.split('/');
+    return months[Number(str[1])-1];
+}
+function getDayofBirth(x){
+    if (x.gender=='M') {
+        let age = x.dob.split('/')[0]
+        if (Number(age)>=10) {
+            return age;
+        }else{
+            return '0'+age;
+        }
+    } else {
+        return Number(x.dob.split('/')[0])+40;
+        
+    }
+}
+function getCodeOf(x){
+    let code = '';
+    code += getFromName(x.surname);
+    code += getFromName(x.name);
+    code += getYearOfBirth(x.dob); 
+    code += getMonthOfBirth(x.dob); 
+    code += getDayofBirth(x);
+    return code;
+}
+
+console.log(getCodeOf(x1));
+console.log(getCodeOf(x2));
+console.log(getCodeOf(x3));
+
+</script>
